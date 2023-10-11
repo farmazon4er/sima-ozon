@@ -1,0 +1,26 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: sima_ozon_development
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: sima_ozon_test
+
+#
+production:
+  <<: *default
+  database: sima_ozon_production
+  username: sima_ozon
+  password: <%= ENV["SIMA_OZON_DATABASE_PASSWORD"] %>
