@@ -85,10 +85,19 @@ GEM
     connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.3)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     drb (2.1.1)
       ruby2_keywords
     error_highlight (0.5.1)
     erubi (1.12.0)
+    faraday (2.7.11)
+      base64
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -226,7 +235,9 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  dotenv-rails
   error_highlight (>= 0.4.0)
+  faraday
   importmap-rails
   jbuilder
   pg (~> 1.1)
