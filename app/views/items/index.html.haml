@@ -1,0 +1,14 @@
+%h1 Товары
+%table
+  %tr
+    %th Артикул
+    %th Название
+    %th Оптовая цена
+    %th Остаток
+  - @items.each do |item|
+    %tr
+      %td #{link_to item.id, item_path(item.id)}
+      %td #{item.short_name}
+      %td #{item.wholesale_price.to_s}
+      %td #{item.balance}
+
