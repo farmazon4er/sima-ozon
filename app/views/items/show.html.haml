@@ -1,0 +1,18 @@
+%h1 #{@item.name}
+
+%p Артикул: #{@item.sid}
+%p ID СимаЛэнда: #{@item.id}
+%p Описание: #{@item.description}
+%p Оптовая цена: #{@item.wholesale_price}
+%p Остаток: #{@item.balance}
+%p Глубина упаковки: #{@item.box_depth}
+%p Ширина упаковки: #{@item.box_height}
+%p Высота упаковки: #{@item.box_width}
+%p Глубина: #{@item.depth}
+%p Высота: #{@item.height}
+%p Ширина: #{@item.width}
+%p Вес: #{@item.weight}
+%p Ссылки на фото: 
+- @item.photos_url.each do |a|
+  %a(title=a href=a) Фото
+
