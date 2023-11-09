@@ -10,7 +10,6 @@ class Item < ApplicationRecord
   end
 
   def photos_url
-    url = base_photo_url.insert(5, ':')
-    agg_photos.map { |i| "#{url}#{i}/700.jpg" }
+    agg_photos.map { |i| "#{base_photo_url}#{i}/700.jpg" }
   end
 end
