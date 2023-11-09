@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class CreateItems < ActiveRecord::Migration[7.1]
   def change
     create_table :items, id: false do |t|
       t.integer :id, primary_key: true, null: false, index: { unique: true }
-      t.integer :sid, null: false,  index: { unique: true }
+      t.integer :sid, null: false, index: { unique: true }
       t.string :name
       t.text :description
       t.string :slug
